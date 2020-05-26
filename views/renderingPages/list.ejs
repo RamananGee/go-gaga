@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <%- include ('../partials/head') %>
+</head>
+     <body class="container">
+
+        <header>
+            <%- include ('../partials/header') %>
+        </header>
+        <main>
+
+            <h4>List of Friends</h4>
+         <table class="table">
+            <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Age</th>
+                  <th scope="col">Location</th>
+                  <th scope="col">Current Relationship Status</th>
+                </tr>
+              </thead>
+            <tbody>
+            <% for(var i=0; i < users.length; i++) { %>
+               <tr>  
+                  <td>  <%= users[i].name %></td>
+                  <td>  <%= users[i].age %></td>
+                  <td>  <%= users[i].location %></td>
+                  <td>  <%= users[i].current_relationship_status %></td>
+               </tr>
+            <% } %>
+            </tbody>
+            </table>
+        </main>
+
+        <footer>
+            <%- include ('../partials/footer.ejs') %>
+        </footer>
+     </body>   
+     
+</html>
+
+
+
+
+

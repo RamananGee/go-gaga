@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <%- include ('../partials/head') %>
+</head>
+     <body class="container">
+
+        <header>
+            <%- include ('../partials/header') %>
+        </header>
+        <main>
+            <form id="form" method="POST" action="/gogaga/add.html">
+                <div class="form-group">
+                    <label for="name">Enter your friend's name</label>
+                    <input type="name" name="name" id="name" required="Name field is required">
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" required="Age field is required">
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" name="location" id="location" required="Location field is required">
+               </div>
+               <div class="form-group">
+                    <label for="status">Current relationship status</label>
+                     <input type="text" name="current_relationship_status" id="current_relationship_status" required="Status field is required">
+                </div>
+            
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </main>
+
+        <footer>
+            <%- include ('../partials/footer') %>
+        </footer>
+     </body>   
+     
+</html>
+
