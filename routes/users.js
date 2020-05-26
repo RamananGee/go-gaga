@@ -1,4 +1,5 @@
 const express = require('express');
+
 const router = express.Router();
 const User = require('./../models/User');
 const userControllers = require('../controllers/userControllers');
@@ -9,7 +10,10 @@ router.get('/add.html', (req, res) => {
     res.render('renderingPages/add');
 });
 
-router.post('/add.html', userControllers.addUser);
+router.get('/', (req, res) => {
+    res.render('renderingPages/add');
+})
+router.post('/addUser', userControllers.addUser);
 
 
 
