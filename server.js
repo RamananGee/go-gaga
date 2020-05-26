@@ -1,9 +1,9 @@
-const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const users = require('./routes/users');
+const viewRoute = require('./routes/viewRoute');
 
 const cors = require("cors");
 dotenv.config({ path: './config.env' });
@@ -17,7 +17,7 @@ app.set("views", __dirname + "/views");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-
+app.use('/', viewRoute);
 app.use('/gogaga', users);
 
 // DB Config
